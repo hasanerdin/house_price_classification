@@ -77,11 +77,3 @@ After tuning and evaluation:
 - The final **best-performing model** was selected based on a balanced trade-off between **Precision**, **Recall**, and **F1-Score**.  
 - Visualizations clearly highlighted differences between models and key contributing features.
 
----
-
-## 🖼️ Example Visuals (Optional)
-
-```markdown
-![Confusion Matrix](images/confusion_matrix.png)
-![Model Comparison](images/model_comparison.png)
-![Feature Importance](images/feature_importance.png)
