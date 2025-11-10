@@ -1,80 +1,87 @@
 # 🏡 House Price Classification with Supervised Learning
 
-This project is part of my **Data Science Bootcamp** at [WBS Coding School](https://www.wbscodingschool.com/).  
-The goal of the project is to use **Supervised Machine Learning** algorithms to predict whether a house is **expensive or not** (binary classification).  
+This project was developed as part of my **Data Science Bootcamp** at [WBS Coding School](https://www.wbscodingschool.com/).  
+The main goal was to build a complete **Supervised Machine Learning pipeline** capable of predicting whether a house is **expensive or not** — a **binary classification** task.
 
 ---
 
-## 🧩 Project Overview
+## 📊 Project Overview
 
-We used a dataset containing various **house features** such as size, number of rooms, location, and more.  
-Our objective was to train and compare multiple classification algorithms using **scikit-learn** to identify which model performs best in predicting high-priced houses.
+We used a dataset containing multiple **house features** (size, number of rooms, location, age, etc.)  
+The workflow includes **data preprocessing, feature engineering, model training, hyperparameter tuning, and evaluation**, all implemented using **scikit-learn Pipelines** for full automation and reproducibility.
 
 ---
 
-## 📚 Techniques and Tools
+## 🧩 Techniques and Tools
 
 ### 🔹 Libraries
 - **Python**
-- **Pandas**, **NumPy** — for data handling and preprocessing  
-- **Matplotlib**, **Seaborn** — for data visualization  
-- **scikit-learn** — for machine learning models and metrics  
+- **Pandas**, **NumPy** – data manipulation and transformation  
+- **Matplotlib**, **Seaborn** – exploratory data analysis (EDA) and visualization  
+- **scikit-learn** – model training, pipelines, and evaluation  
 
 ### 🔹 Machine Learning Models
-#### 🤖 Supervised Classification
-- **Decision Tree Classifier**
-- **Random Forest Classifier**
-- **K-Nearest Neighbors (KNN)**
-- **Logistic Regression**
-- **Support Vector Machine (SVM)**
+- **Decision Tree Classifier**  
+- **Random Forest Classifier**  
+- **K-Nearest Neighbors (KNN)**  
+- **Logistic Regression**  
+- **Support Vector Machine (SVM)**  
+
+### 🔹 Key Techniques
+- **Pipeline & ColumnTransformer**
+  - Processed **Numerical**, **Ordinal**, and **Categorical** features in **parallel pipelines**
+  - Applied appropriate transformations:
+    - Scaling numerical columns  
+    - Encoding categorical and ordinal features  
+  - Ensured full automation from preprocessing to prediction
+
+- **GridSearchCV** for hyperparameter optimization  
+- **Model Evaluation** using multiple metrics  
+- **Feature Importance** analysis for interpretability  
 
 ---
 
 ## ⚙️ Workflow
 
-1. **Data Preprocessing**
-   - Handling missing values  
-   - Encoding categorical features  
-   - Feature scaling  
+### 1️⃣ Data Preprocessing
+- Handled missing values and duplicates  
+- Detected and treated outliers  
+- Encoded categorical and ordinal variables  
+- Scaled numerical features  
 
-2. **Model Training**
-   - Split data into training and testing sets  
-   - Train multiple classification models  
-   - Compare accuracy, precision, recall, and F1-score  
+### 2️⃣ Automated Pipelines
+- Implemented **scikit-learn Pipelines** to structure the preprocessing and modeling steps  
+- Used **ColumnTransformer** to handle multiple feature types simultaneously  
+- Ensured seamless integration of preprocessing → training → prediction steps  
 
-3. **Model Evaluation**
-   - Confusion Matrix  
-   - ROC Curve  
-   - Feature Importance (for tree-based models)  
+### 3️⃣ Model Training and Optimization
+- Trained multiple classification models  
+- Used **GridSearchCV** to determine best hyperparameters  
+- Evaluated each model based on:
+  - **Accuracy**
+  - **Precision**
+  - **Recall**
+  - **F1-Score**
 
----
-
-## 📊 Results
-
-Each model’s performance was compared based on:
-- **Accuracy**
-- **Precision**
-- **Recall**
-- **F1-Score**
-
-The final evaluation helped determine which algorithm best classifies houses as “expensive” or “not expensive.”
+### 4️⃣ Evaluation and Interpretation
+- Generated **Confusion Matrices** for each model  
+- Visualized performance metrics using **bar charts and heatmaps**  
+- Analyzed **Feature Importance** for tree-based algorithms  
 
 ---
 
-## 🚀 Next Steps
+## 🏁 Results
 
-- Fine-tune models using GridSearchCV  
-- Explore feature engineering for better performance  
-- Test on external datasets for generalization  
-
----
-
-## 🤝 Connect
-
-🔗 [LinkedIn – Hasan Erdin](https://www.linkedin.com/in/hasanerdin/)  
-📊 [Tableau Public – Hasan Erdin](https://public.tableau.com/app/profile/hasan.erdin/vizzes)  
+After tuning and evaluation:
+- Models were compared across all key metrics.  
+- The final **best-performing model** was selected based on a balanced trade-off between **Precision**, **Recall**, and **F1-Score**.  
+- Visualizations clearly highlighted differences between models and key contributing features.
 
 ---
 
-### 🏷️ Tags
-`Data Science` `Machine Learning` `Supervised Learning` `Classification` `scikit-learn` `Python` `WBS Coding School`
+## 🖼️ Example Visuals (Optional)
+
+```markdown
+![Confusion Matrix](images/confusion_matrix.png)
+![Model Comparison](images/model_comparison.png)
+![Feature Importance](images/feature_importance.png)
